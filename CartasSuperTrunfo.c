@@ -27,15 +27,20 @@ int main() {
     printf("\nQual a area da sua cidade?(Km²) ");
     scanf("%f", &Area1);
     printf("Quantos pontos turisticos possuem a sua cidade?");
-    scanf("");
+    scanf("%d", &PontosTuristicos1);
     printf("\nQual a população da cidade? ");
-    scanf("");
+    scanf("%f", &Populacao1);
     printf("\nQual o PIB da cidade? ");
-    scanf("");
+    scanf("%f", &Pib1);
 
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    printf("\n-------------------------------------\n");
+    printf("Certo, vamos conferir os dados das suas cartas:\n");
+    // codigo, cidade(estado), populaçao, pib, area, turistico:
+    printf("CODIGO: %s", CityCode1);
+    printf("\n fim \n");
 
     return 0;
 }
