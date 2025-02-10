@@ -27,9 +27,9 @@ int main() {
     scanf("%f", &Area1);
     printf("Quantos pontos turisticos possuem a sua cidade? ");
     scanf("%d", &TouristPoints1);
-    printf("\nQual a população da cidade? ");
+    printf("Qual a população da cidade? ");
     scanf("%f", &Populacao1);
-    printf("\nQual o PIB da cidade? ");
+    printf("Qual o PIB da cidade? ");
     scanf("%f", &Pib1);
 
     //calculo de densidade e pib
