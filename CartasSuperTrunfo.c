@@ -8,11 +8,12 @@ int main() {
     int TouristPoints1, TouristPoints2;
     float Area1, Populacao1, Pib1, Area2, Populacao2, Pib2;
 
+
     // Cadastro das Cartas:
     printf("~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     printf("Olá! seja bem vindo ao SuperTrunfo da MateCheck!\n");
-
     printf("Para começar, nos informe os valores das suas cartas!\n");
+
 
     //cadastro da carta cidade 1:
     printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
@@ -32,6 +33,7 @@ int main() {
     printf("Qual o PIB da cidade? ");
     scanf("%f", &Pib1);
 
+
     //cadastro da carta cidade 2:
     printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     printf("Sua segunda carta pertence a que estado? ");
@@ -49,6 +51,7 @@ int main() {
     scanf("%f", &Populacao2);
     printf("Qual o PIB da cidade? ");
     scanf("%f", &Pib2);
+
 
     //calculo de densidade e pib
         //variaveis de calculo
@@ -87,12 +90,64 @@ int main() {
     printf("\nPONTOS TURISTICOS: %d", TouristPoints2);
     printf("\nPIB: %.2f", Pib2);
     printf("\nDENSIDADE DEMOGRAFICA: %.2f", DensityCalc2);
-    printf("\nPIB PER CAPTA: %.2f", PibCalc2);
+    printf("\nPIB PER CAPTA: %.2f\n", PibCalc2);
 
 
-    // Exibição de comparação das Cartas
+    //comparaçao das cartas 1 e 2:
+    //variavel de pontuaçao
+    int PontosCard1 = 0, PontosCard2 = 0;
+
+    printf("\n--------------------------------------------------\n");
+    printf("Hora do duelo!\n");
+    if (PibCalc1 > PibCalc2){
+        printf("A carta 1 possui um PIB per capta maior (+1 ponto)\n");
+        PontosCard1 ++;}
+    if(PibCalc1==PibCalc2){
+        printf("Tivemos um empate e ambas as cartas ganharam +1 ponto\n");
+        PontosCard1 ++;
+        PontosCard2 ++;
+        }
+    else{
+        printf("A carta 2 possui um PIB per capta maior (+1 ponto)\n");
+        PontosCard2 ++;}
+
+    if (DensityCalc1 > DensityCalc2){
+        printf("A carta 1 possui uma densidade populacional maior (+1 ponto)\n");
+        PontosCard1 ++;}
+    if(DensityCalc1==DensityCalc2){
+        printf("Tivemos um empate e ambas as cartas ganharam +1 ponto\n");
+        PontosCard1 ++;
+        PontosCard2 ++;
+    }
+    else{
+        printf("A carta 2 possui (+1 ponto)\n");
+        PontosCard2 ++;}
+
+    if (PibCalc1 > PibCalc2){
+        printf("A carta 1 possui (+1 ponto)\n");
+        PontosCard1 ++;}
+    if(PibCalc1==PibCalc2){
+        printf("Tivemos um empate e ambas as cartas ganharam +1 ponto\n");
+        PontosCard1 ++;
+        PontosCard2 ++;
+    }
+    else{
+        printf("A carta 2 possui (+1 ponto)\n");
+        PontosCard2 ++;}
+
+
+    //Exibiçao de vencedor + pontuaçao final:
+    printf("\n--------------------------------------------------\n");
+    if(PontosCard1>PontosCard2){
+        printf("\nA carta 1 venceu com %d pontos!", PontosCard1);}
+    if(PontosCard1==PontosCard2){
+        printf("\nUAU! Tivemos um empate inesperado e ambas as cartas ganharam!");}
+    else{
+        printf("\nA carta 2 venceu com %d pontos!", PontosCard2);}
+
 
     printf("\n fim \n");
+    printf("--------------------------------------------------\n");
 
     return 0;
 }
