@@ -105,15 +105,15 @@ int main() {
         PontosCard2++;
     }
 
-    if (DensityCalc1 > DensityCalc2) {
-        printf("A carta 1 possui uma densidade populacional maior (+1 ponto)\n");
+    if (DensityCalc1 < DensityCalc2) {
+        printf("A carta 1 possui uma densidade populacional menor (+1 ponto)\n");
         PontosCard1++;
     } else if (DensityCalc1 == DensityCalc2) {
         printf("Tivemos um empate e ambas as cartas ganharam +1 ponto\n");
         PontosCard1++;
         PontosCard2++;
     } else {
-        printf("A carta 2 possui uma densidade populacional maior (+1 ponto)\n");
+        printf("A carta 2 possui uma densidade populacional menor (+1 ponto)\n");
         PontosCard2++;
     }
 
